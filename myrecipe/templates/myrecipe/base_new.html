@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>{% block title %} {{title}} {% endblock %}</title>
+
+
+</head>
+
+<body>
+
+<div class="brand">Рецепты блюд</div>
+<div class="address-bar">Будет вкусно</div>
+
+<!-- Navigation -->
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                {% if user.is_authenticated %}
+                <li><b>Добро пожаловать : {{ user.get_username }}</b></li>
+                <li><a href="{% url 'logout' %}">Выход</a></li>
+                <li><a href="{% url 'get_user_recipes' %}">Мои рецепты</a></li>
+                <li><a href="{% url 'add_recipe' %}">Добавить рецепт</a></li>
+                {% else %}
+                <li><a href="{% url 'login' %}">Вход</a></li>
+                {% endif %}
+                <li><a href="{% url 'home' %}">На главную</a></li>
+                <li><a href="{% url 'authors' %}">Все авторы</a></li>
+                <li><a href="{% url 'recipes' %}">Все рецепты</a></li>
+            </ul>
+            {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li class="{{ message.tags }}">
+                    {{ message|safe }}
+                </li>
+
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </div>
+
+    </div>
+
+</nav>
+
+{% block content %}
+{% endblock %}
+
+
+</html>
