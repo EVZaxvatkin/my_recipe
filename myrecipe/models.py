@@ -24,7 +24,7 @@ class Recipe(models.Model):
     description = models.CharField(verbose_name='Описание', max_length=500)
     steps = models.CharField(verbose_name='Этапы приготовления', max_length=10000)
     cooking_time = models.IntegerField(verbose_name='Время приготовления, мин')
-    image = models.ImageField(verbose_name='Фото блюда', upload_to='media/images/')
+    image = models.ImageField(verbose_name='Фото блюда', upload_to='images/')
     create_at = models.DateTimeField(verbose_name='Время публикации', auto_now = True)
 
 
