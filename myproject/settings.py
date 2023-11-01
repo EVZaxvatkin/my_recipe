@@ -85,12 +85,14 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'Evgeny1983$default',
-        'USER': 'Evgeny1983',
+        'NAME': 'myrecipe$default',
+        'USER': 'myrecipe',
         'PASSWORD': os.getenv('MYSQL_PASSWORD'),
-        'HOST': 'Evgeny1983.mysql.pythonanywhere-services.com',
+        'HOST': 'myrecipe.mysql.pythonanywhere-services.com',
         'OPTIONS': {
-                'init_command': "SET NAMES 'utf8mb4';SET sql_mode='STRICT_TRANS_TABLES'",'charset': 'utf8mb4',
+                'init_command': "SET NAMES 'utf8mb4';"
+                "SET sql_mode='STRICT_TRANS_TABLES'",
+                'charset': 'utf8mb4',
         },
     }
 }
