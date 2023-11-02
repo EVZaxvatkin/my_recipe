@@ -18,7 +18,8 @@
     <open-files />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
-    <filter-actions connection-id="5be3a859-7690-4ebf-9bd7-1929a162eac7" dataset="db.auth_user" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="21571b4d-fa14-4e0a-99eb-414df0c0752d" dataset="db.myrecipe_recipe" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="21571b4d-fa14-4e0a-99eb-414df0c0752d" dataset="db.auth_user" active-filter-id="EMPTY_FILTER" />
   </component>
   <component name="DBNavigator.Project.ExecutionManager">
     <retain-sticky-names value="false" />

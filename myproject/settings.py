@@ -28,10 +28,7 @@ DEBUG = False
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 
-ALLOWED_HOSTS = [
-    '127.0.0.1',
-    'myrecipe.pythonanywhere.com',
-]
+ALLOWED_HOSTS = ["myrecipe.pythonanywhere.com",]
 
 
 # Application definition
@@ -87,7 +84,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'myrecipe$default',
         'USER': 'myrecipe',
-        'PASSWORD': os.getenv('MYSQL_PASSWORD'),
+        'PASSWORD': '2023November',
         'HOST': 'myrecipe.mysql.pythonanywhere-services.com',
         'OPTIONS': {
             'init_command': "SET NAMES 'utf8mb4';SET sql_mode='STRICT_TRANS_TABLES'",
